@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  user-select: none;
+}
+
+:root {
+  --theme-pink-color: #f6e1e0;
+  --theme-pink-text-color: #f7a3ab;
+}
+
+body {
+  background-color: var(--theme-pink-color);
+  font-family: Helvetica, Arial, "MicrosoftYaHei", "Microsoft Yahei", sans-serif;
+  font-family: STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
+  width: 100%;
+  height: 100%;
+}
+
+h1, p, div {
+  color: var(--theme-pink-text-color);
+}
+
+h1 {
+  font-style: normal;
+  font-size: 32pt;
+}
+
+p {
+  font-size: 22pt;
+}
+
+div.left-contatiner {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+div.title {
+  position: absolute;
+  top: 30%;
+  left: 6%;
+}
+
+div.time {
+  position: relative;
+  /*right: 20%;*/
+}
+
+div.background:before{
+  content:'';
+  position: relative;
+  color:var(--theme-pink-text-color);
+  width: 900px;
+  height: 600px;
+  background-color: #f7ccd0;
+}
+
+div.background {
+  background-color: #f7e0e2;
+  position: fixed;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+div.background .message{
+  position: relative;
+}
+div.background img {
+  position: absolute;
+  bottom: 10%;
+  right: 120px;
+  width: 280px;
+  min-width: 50px;
+  height: auto;
+  opacity: 0;
+  cursor: pointer;
+  transition: .141s;
+}
+
+div.background img:hover {
+  bottom: 12%;
+  /*transform: scale(1.2);*/
+}
+
+
+
+div.title div {
+  position: relative;
+  opacity: 0;
+}
+
+div.title div:not(:first-child) {
+  line-height: 36px;
+}
+
+.form {
+  position: relative;
+  top: 16px;
+  opacity: 0;
+}
+
+.form form {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 输入框 按钮 */
+.form input {
+  line-height: 42px;
+  outline-style: none;
+  border: 0;
+}
+
+.form input.content {
+  padding: 0 10px;
+  width: 280px;
+  min-width: 120px;
+}
+
+.form input.button {
+  padding: 0;
+  width: 80px;
+  min-width: 40px;
+  margin-left: 10px;
+}
+
+.form input.button:hover {
+  background-color: #ccc;
+}
+
+.form .text {
+  opacity: 0;
+  /* display: none; */
+  background-color: #fff;
+  width: 300px;
+  margin-top: 10px;
+  z-index: -10;
+}
+
+.form .text ul li {
+  list-style: none;
+  line-height: 30px;
+  padding: 0 12px;
+}
+
+.form .text ul li:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.diary {
+  position: absolute;
+  top: 20%;
+  right: 30%;
+  display: none;
+}
+
+/* 模态框 */
+.model-panel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .2);
+  opacity: 0;
+  z-index: -100;
+}
+
+.model .x {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.model {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, .3);
+}
+
+@media (max-width:810px) {}
