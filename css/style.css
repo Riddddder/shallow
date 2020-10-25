@@ -86,8 +86,6 @@ div.background img:hover {
   /*transform: scale(1.2);*/
 }
 
-
-
 div.title div {
   position: relative;
   opacity: 0;
@@ -99,7 +97,6 @@ div.title div:not(:first-child) {
 
 .form {
   position: relative;
-  top: 16px;
   opacity: 0;
 }
 
@@ -192,4 +189,33 @@ div.title div:not(:first-child) {
   box-shadow: 3px 3px 12px rgba(0, 0, 0, .3);
 }
 
-@media (max-width:810px) {}
+@media (max-width:767px) {
+  div.title {
+    position: absolute;
+    top: 42px;
+  }
+  div.background img {
+    position: absolute;
+    bottom: 10%;
+    width: 180px;
+    min-width: 50px;
+    height: auto;
+    opacity: 0;
+    cursor: pointer;
+    transition: .141s;
+  }
+}
+@media (max-width:450px) {
+  div.background .img {
+    position:absolute;
+    bottom: 10%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+  div.background img{
+    position: static;
+    display: block;
+  }
+}
